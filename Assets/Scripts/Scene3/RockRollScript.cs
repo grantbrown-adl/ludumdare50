@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerControllerScript : MonoBehaviour
+public class RockRollScript : MonoBehaviour
 {
     private Rigidbody2D rb2d;
     private SpriteRenderer spriteRenderer;
@@ -26,7 +26,6 @@ public class PlayerControllerScript : MonoBehaviour
 
     [SerializeField] private bool isGrounded;
     [SerializeField] private bool viewPlatformTouch;
-    [SerializeField] private bool sceneThree;
 
     private float epsilon = 0.01f;
 
@@ -48,7 +47,7 @@ public class PlayerControllerScript : MonoBehaviour
     {
         viewPlatformTouch = hasTouchedPlatform;
         GetInput();
-        HandleInput();        
+        HandleInput();
     }
 
     private void FixedUpdate()
@@ -70,19 +69,11 @@ public class PlayerControllerScript : MonoBehaviour
         if(IsGrounded)
             currentJump = 0;
 
-
         if(Input.GetButtonDown("Jump") && (currentJump < maxJumps))
         {
-            if(sceneThree)
-            {
-                currentJump++;
-                rb2d.velocity = new Vector2(rb2d.velocity.x, rb2d.velocity.y * jumpVelocity);
-            }
-            else
-            {
-                currentJump++;
-                rb2d.velocity = Vector2.up * jumpVelocity;
-            }
+            currentJump++;
+            rb2d.velocity = new Vector2(rb2d.velocity.x, 1 * jumpVelocity);
+
         }
 
         if(rb2d.velocity.y > epsilon)

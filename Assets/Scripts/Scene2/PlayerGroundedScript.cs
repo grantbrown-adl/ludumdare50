@@ -9,15 +9,23 @@ public class PlayerGroundedScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(!CollisionList.Contains(collision) && collision.CompareTag("Platform") && !PlayerControllerScript.HasTouchedPlatform)
+        {
+            PlayerControllerScript.HasTouchedPlatform = true;
+            CollisionList.Add(collision);
+        }
+
+        if(!CollisionList.Contains(collision) && collision.CompareTag("BadGround") && PlayerControllerScript.HasTouchedPlatform)
+        {
+            GameManagerScript.Happiness--;
+            CollisionList.Add(collision);
+        }
+
         if(!CollisionList.Contains(collision))
         {
             CollisionList.Add(collision);
         }
 
-        if(!CollisionList.Contains(collision) && collision.CompareTag("Ground"))
-        {
-            CollisionList.Add(collision);
-        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)

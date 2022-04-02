@@ -8,8 +8,6 @@ public class GameManagerScript : MonoBehaviour
 {
     [SerializeField] private Slider slider;
     [SerializeField] private static int happiness = 0;
-    [SerializeField] private int score = 0;
-    [SerializeField] private string nameOfScene;
 
     public static int Happiness { get => happiness; set => happiness = value; }
 
@@ -23,17 +21,12 @@ public class GameManagerScript : MonoBehaviour
             happiness++;
 
         slider.value = happiness;
-        score = happiness;
 
         if(happiness >= 10)
         {
             happiness = 0;
-            LoadScene(nameOfScene);
+            if(SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings - 1)
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-    }
-
-    void LoadScene(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
     }
 }
