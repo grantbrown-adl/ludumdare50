@@ -44,7 +44,6 @@ public class PlayerScript : MonoBehaviour
     {
         inputVector.x = Input.GetAxisRaw("Horizontal");
         inputVector.y = Input.GetAxisRaw("Vertical"); // Probably unneeded at the moment
-        //moveVector = new Vector2(moveVector.x * moveSpeed, 0.0f);
     }
 
     void HandleInput()
