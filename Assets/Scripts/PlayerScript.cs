@@ -63,7 +63,8 @@ public class PlayerScript : MonoBehaviour
             isFacingRight = !isFacingRight;
         }
         inputVector.Normalize();
-        moveVector = new Vector2(inputVector.x * moveSpeed, 0.0f);
+        //moveVector = new Vector2(inputVector.x * moveSpeed, 0.0f);
+        moveVector = new Vector2(inputVector.x * moveSpeed, inputVector.y * moveSpeed);
     }
 
     void GetComponents()
