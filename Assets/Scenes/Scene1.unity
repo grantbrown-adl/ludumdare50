@@ -301,7 +301,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &403624085
 Transform:
   m_ObjectHideFlags: 0
@@ -652,7 +652,7 @@ GameObject:
   - component: {fileID: 582531506}
   - component: {fileID: 582531505}
   m_Layer: 5
-  m_Name: Frown
+  m_Name: Sad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -697,7 +697,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9647395baf986b44ab4faa9678707c52, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8da5ccc749e49804eb8bdcaf88d6b892, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
