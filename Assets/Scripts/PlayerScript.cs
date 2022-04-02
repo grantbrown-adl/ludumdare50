@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour
 {
     private Rigidbody2D rb2d;
+    private SpriteRenderer spriteRenderer;
     [SerializeField] private Vector2 inputVector;
     [SerializeField] private Vector2 moveVector;
     [SerializeField] private Vector2 startVector;
@@ -14,6 +15,9 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private float gravityScale;
     [SerializeField] private float rotateFactor;
     [SerializeField] private float angleCoefficient;
+    [SerializeField] private bool isFacingRight;
+
+    private float epsilon = 0.01f;
 
     #region Unity Functions
     private void Awake()
@@ -48,16 +52,29 @@ public class PlayerScript : MonoBehaviour
 
     void HandleInput()
     {
+        if(!isFacingRight && inputVector.x >= epsilon)
+        {
+            spriteRenderer.flipX = false;
+            isFacingRight = !isFacingRight;
+        }
+        else if(isFacingRight && inputVector.x <= -epsilon)
+        {
+            spriteRenderer.flipX = true;
+            isFacingRight = !isFacingRight;
+        }
+        inputVector.Normalize();
         moveVector = new Vector2(inputVector.x * moveSpeed, 0.0f);
     }
 
     void GetComponents()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void InitialiseSettings()
     {
+        isFacingRight = true;
         transform.position = startVector;
         rb2d.gravityScale = gravityScale;
         rb2d.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
