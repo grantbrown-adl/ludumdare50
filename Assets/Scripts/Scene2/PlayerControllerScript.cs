@@ -27,6 +27,8 @@ public class PlayerControllerScript : MonoBehaviour
 
     private float epsilon = 0.01f;
 
+    public bool IsGrounded { get => isGrounded; }
+
     #region Unity Functions
     private void Awake()
     {
@@ -66,7 +68,7 @@ public class PlayerControllerScript : MonoBehaviour
 
     void HandleInput()
     {
-        if(isGrounded)
+        if(IsGrounded)
             currentJump = 0;
 
         if(Input.GetButtonDown("Jump") && (currentJump < maxJumps))
@@ -109,7 +111,7 @@ public class PlayerControllerScript : MonoBehaviour
         transform.position = startVector;
         rb2d.gravityScale = gravityScale;
         rb2d.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-        rb2d.interpolation = RigidbodyInterpolation2D.Interpolate;
+        //rb2d.interpolation = RigidbodyInterpolation2D.Interpolate;  Messes with moving platforms
         transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
         currentAngle = transform.eulerAngles;
     }
