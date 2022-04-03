@@ -37,12 +37,12 @@ public class GameManagerScript : MonoBehaviour
 
         if(Input.GetButtonDown("Fire1"))
         {
-            happiness++;
+            //happiness++;
         }
 
         if(Input.GetButtonDown("Fire2"))
         {
-            happiness--;
+            //happiness--;
         }
 
         if(isPaused)

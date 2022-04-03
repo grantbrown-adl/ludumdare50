@@ -28,11 +28,24 @@ public class SpawnerScript : MonoBehaviour
 
     void SpawnObject()
     {
-        int randomSpawn = Random.Range(0, objectsToSpawn.Length);
+        int rand = Random.Range(1, 100);
 
-        GameObject gameObject = Instantiate(objectsToSpawn[randomSpawn]);
-        gameObject.transform.position = this.transform.position + new Vector3(Random.Range(-spawnRange, spawnRange), 0.0f, 0.0f);
-        gameObject.transform.parent = this.transform;
+        if(rand <= 66)
+        {
+            GameObject gameObject = Instantiate(objectsToSpawn[0]);
+            gameObject.transform.position = this.transform.position + new Vector3(Random.Range(-spawnRange, spawnRange), 0.0f, 0.0f);
+            gameObject.transform.parent = this.transform;
+        }
+        else
+        {
+            GameObject gameObject = Instantiate(objectsToSpawn[1]);  
+            gameObject.transform.position = this.transform.position + new Vector3(Random.Range(-spawnRange, spawnRange), 0.0f, 0.0f);
+            gameObject.transform.parent = this.transform;
+        }
+        //int randomSpawn = Random.Range(0, objectsToSpawn.Length);
+
+        
+
     }
 
     void TimedSpawn()

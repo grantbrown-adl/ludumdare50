@@ -6,11 +6,30 @@ public class StartCanvasScript : MonoBehaviour
 {
     private void Start()
     {
-        GameManagerScript.IsPaused = true;
+        VolumeLoad();
+        GameManagerScript.IsPaused = true;        
     }
 
     public void Unpause()
     {
         GameManagerScript.IsPaused = false;
+    }
+
+    void VolumeLoad()
+    {
+        if(!PlayerPrefs.HasKey("volume"))
+        {
+            PlayerPrefs.SetFloat("volume", 0.5f);
+            UpdateVolume();
+        }
+        else
+        {
+            UpdateVolume();
+        }
+    }
+
+    public void UpdateVolume()
+    {
+        AudioListener.volume = PlayerPrefs.GetFloat("volume");
     }
 }

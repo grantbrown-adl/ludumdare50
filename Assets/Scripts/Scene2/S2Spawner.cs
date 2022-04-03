@@ -15,6 +15,7 @@ public class S2Spawner : MonoBehaviour
     [SerializeField] private float timerMin;
     [SerializeField] private float countdown;
     [SerializeField] private bool isSceneThree;
+    [SerializeField] private bool spawnConstant;
 
     [SerializeField] private bool moveRight;
     public static float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
@@ -32,7 +33,7 @@ public class S2Spawner : MonoBehaviour
 
     void SpawnObject()
     {
-        if(playerTransform.position.y > transform.position.y && !isSceneThree)
+        if(playerTransform.position.y > (transform.position.y + 1.75f) && !isSceneThree && !spawnConstant)
         {
         }
         else

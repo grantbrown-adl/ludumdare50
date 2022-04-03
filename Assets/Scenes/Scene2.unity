@@ -172,10 +172,11 @@ MonoBehaviour:
   - {fileID: 3966249299843970602, guid: 4931484d73f4f6a4a8098228ba162a66, type: 3}
   playerTransform: {fileID: 1504712302}
   viewMoveSpeed: 2
-  timerMax: 6
+  timerMax: 7
   timerMin: 3
   countdown: 0
   isSceneThree: 0
+  spawnConstant: 0
   moveRight: 0
 --- !u!1 &83369158
 GameObject:
@@ -226,10 +227,11 @@ MonoBehaviour:
   - {fileID: 3966249299843970602, guid: 4931484d73f4f6a4a8098228ba162a66, type: 3}
   playerTransform: {fileID: 1504712302}
   viewMoveSpeed: 2
-  timerMax: 6
+  timerMax: 7
   timerMin: 3
   countdown: 0
   isSceneThree: 0
+  spawnConstant: 0
   moveRight: 0
 --- !u!1001 &323698670
 PrefabInstance:
@@ -397,10 +399,11 @@ MonoBehaviour:
   - {fileID: 3966249299843970602, guid: 4931484d73f4f6a4a8098228ba162a66, type: 3}
   playerTransform: {fileID: 1504712302}
   viewMoveSpeed: 2
-  timerMax: 6
+  timerMax: 7
   timerMin: 3
   countdown: 0
   isSceneThree: 0
+  spawnConstant: 0
   moveRight: 0
 --- !u!1 &737323400
 GameObject:
@@ -451,10 +454,11 @@ MonoBehaviour:
   - {fileID: 3966249299843970602, guid: 4931484d73f4f6a4a8098228ba162a66, type: 3}
   playerTransform: {fileID: 1504712302}
   viewMoveSpeed: 2
-  timerMax: 6
+  timerMax: 7
   timerMin: 3
   countdown: 0
   isSceneThree: 0
+  spawnConstant: 0
   moveRight: 0
 --- !u!1 &820213398
 GameObject:
@@ -6942,10 +6946,11 @@ MonoBehaviour:
   - {fileID: 3966249299843970602, guid: 4931484d73f4f6a4a8098228ba162a66, type: 3}
   playerTransform: {fileID: 1504712302}
   viewMoveSpeed: 2
-  timerMax: 6
+  timerMax: 7
   timerMin: 3
   countdown: 0
   isSceneThree: 0
+  spawnConstant: 0
   moveRight: 0
 --- !u!1 &1060870789
 GameObject:
@@ -7107,10 +7112,11 @@ MonoBehaviour:
   - {fileID: 3966249299843970602, guid: 4931484d73f4f6a4a8098228ba162a66, type: 3}
   playerTransform: {fileID: 1504712302}
   viewMoveSpeed: 2
-  timerMax: 6
+  timerMax: 7
   timerMin: 3
   countdown: 0
   isSceneThree: 0
+  spawnConstant: 1
   moveRight: 0
 --- !u!1 &1135393269
 GameObject:
@@ -7267,10 +7273,11 @@ MonoBehaviour:
   - {fileID: 3966249299843970602, guid: 4931484d73f4f6a4a8098228ba162a66, type: 3}
   playerTransform: {fileID: 1504712302}
   viewMoveSpeed: 2
-  timerMax: 6
+  timerMax: 7
   timerMin: 3
   countdown: 0
   isSceneThree: 0
+  spawnConstant: 0
   moveRight: 0
 --- !u!1 &1374123732
 GameObject:
@@ -7612,10 +7619,11 @@ MonoBehaviour:
   - {fileID: 3966249299843970602, guid: 4931484d73f4f6a4a8098228ba162a66, type: 3}
   playerTransform: {fileID: 1504712302}
   viewMoveSpeed: 2
-  timerMax: 6
-  timerMin: 3
+  timerMax: 5
+  timerMin: 2
   countdown: 0
   isSceneThree: 0
+  spawnConstant: 1
   moveRight: 0
 --- !u!4 &1757376489
 Transform:
@@ -7680,10 +7688,11 @@ MonoBehaviour:
   - {fileID: 3966249299843970602, guid: 4931484d73f4f6a4a8098228ba162a66, type: 3}
   playerTransform: {fileID: 1504712302}
   viewMoveSpeed: 2
-  timerMax: 6
+  timerMax: 7
   timerMin: 3
   countdown: 0
   isSceneThree: 0
+  spawnConstant: 0
   moveRight: 0
 --- !u!1 &1858594742
 GameObject:
@@ -7883,10 +7892,11 @@ MonoBehaviour:
   - {fileID: 3966249299843970602, guid: 4931484d73f4f6a4a8098228ba162a66, type: 3}
   playerTransform: {fileID: 1504712302}
   viewMoveSpeed: 2
-  timerMax: 6
+  timerMax: 7
   timerMin: 3
   countdown: 0
   isSceneThree: 0
+  spawnConstant: 0
   moveRight: 0
 --- !u!1 &2123292953
 GameObject:

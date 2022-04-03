@@ -214,7 +214,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 879bc66baaf91ce4faf8ca6830a9e267, type: 3}
+  m_audioClip: {fileID: 8300000, guid: be4fa86359e6e634baae26d959b2b497, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -528,7 +528,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e868bdd2480b8f347b3738543a7cfbda, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 822fa40d11c98ea4398229fd3af2e17c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1232,7 +1232,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8da5ccc749e49804eb8bdcaf88d6b892, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 309f7d48495dd344fa969f38e1bbb6c8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1928,7 +1928,7 @@ SpriteRenderer:
   m_SortingLayerID: 1782925287
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 508591715825662441, guid: 4803eafa15975224b8cfa0977901eaea, type: 3}
+  m_Sprite: {fileID: 5418501662701647962, guid: 6edebf8ad1647da40ae605817de45819, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
