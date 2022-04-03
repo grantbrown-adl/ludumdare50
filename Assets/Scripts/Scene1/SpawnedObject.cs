@@ -21,7 +21,7 @@ public class SpawnedObject : MonoBehaviour
 
         float distToPlayer = Vector2.Distance(spawnerScript.PlayerTransform.position, transform.position);
 
-        if(distToPlayer < 2.5f)
+        if(distToPlayer < 2.0f)
             polarity.SetActive(true);
         else
             polarity.SetActive(false);

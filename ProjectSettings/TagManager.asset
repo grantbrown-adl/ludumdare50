@@ -9,6 +9,10 @@ TagManager:
   - Ground
   - BadGround
   - Platform
+  - spiker
+  - Despawn
+  - EndFloor
+  - Flag
   layers:
   - Default
   - TransparentFX

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerGroundedScript : MonoBehaviour
 {
+    [SerializeField] private bool isSceneTwo;
     [SerializeField] private List<Collider2D> collisionList = new List<Collider2D>();
     public List<Collider2D> CollisionList { get => collisionList; set => collisionList = value; }
 
@@ -21,7 +22,18 @@ public class PlayerGroundedScript : MonoBehaviour
             CollisionList.Add(collision);
         }
 
-        if(!CollisionList.Contains(collision))
+        if(!CollisionList.Contains(collision) && collision.CompareTag("Floor"))
+        {
+            CollisionList.Add(collision);
+        }
+
+        if(!CollisionList.Contains(collision) && isSceneTwo && collision.CompareTag("Flag"))
+        {
+            GameManagerScript.Happiness = 10;
+            CollisionList.Add(collision);
+        }
+
+        if(!CollisionList.Contains(collision) && isSceneTwo)
         {
             CollisionList.Add(collision);
         }

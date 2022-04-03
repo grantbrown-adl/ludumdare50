@@ -15,8 +15,6 @@ public class MovingPlatformScript : MonoBehaviour
             moveSpeed = S2Spawner.MoveSpeed;
         else
             moveSpeed = -S2Spawner.MoveSpeed;
-
-        //spawnerScript = GetComponentInParent<S2Spawner>();
     }
 
     private void Update()
@@ -27,29 +25,14 @@ public class MovingPlatformScript : MonoBehaviour
             Destroy(this.gameObject);
     }
 
-    /*    private void OnCollisionEnter2D(Collision2D collision)
-        {
-            if(collision.gameObject.GetComponent<PlayerControllerScript>())
-            {
-                collision.transform.parent = this.gameObject.transform;
-            }
-        }
-
-        private void OnCollisionExit2D(Collision2D collision)
-        {
-            if(collision.gameObject.GetComponent<PlayerControllerScript>())
-            {
-                collision.transform.parent = null;
-            }
-        }*/
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
         {
             collision.transform.parent = this.gameObject.transform;
-            //GameManagerScript.Happiness += happiness;
-            //Destroy(this.gameObject);
+            float rand = Random.Range(1.0f, 3.0f);
+
+            StartCoroutine(Wait(rand, collision));
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -58,5 +41,13 @@ public class MovingPlatformScript : MonoBehaviour
         {
             collision.transform.parent = null;
         }
+    }
+
+    IEnumerator Wait(float time, Collider2D collider)
+    {
+        yield return new WaitForSeconds(time);
+
+        collider.transform.parent = null;
+        Destroy(this.gameObject);
     }
 }

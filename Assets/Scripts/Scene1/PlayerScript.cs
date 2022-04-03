@@ -32,14 +32,20 @@ public class PlayerScript : MonoBehaviour
 
     private void Update()
     {
-        GetInput();
-        HandleInput();
+        if(!GameManagerScript.IsPaused)
+        {
+            GetInput();
+            HandleInput();
+        }
     }
 
     private void FixedUpdate()
     {
-        rb2d.velocity = moveVector;
-        TiltTransform();
+        if(!GameManagerScript.IsPaused)
+        {
+            rb2d.velocity = moveVector;
+            TiltTransform();
+        }
     }
     #endregion
 

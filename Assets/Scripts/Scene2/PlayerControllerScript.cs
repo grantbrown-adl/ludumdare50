@@ -47,14 +47,22 @@ public class PlayerControllerScript : MonoBehaviour
     private void Update()
     {
         viewPlatformTouch = hasTouchedPlatform;
-        GetInput();
-        HandleInput();        
+
+        if(!GameManagerScript.IsPaused)
+        {        
+            GetInput();
+            HandleInput();
+        }        
     }
 
     private void FixedUpdate()
     {
-        rb2d.velocity = moveVector;
-        TiltTransform();
+        if(!GameManagerScript.IsPaused)
+        {
+        
+            rb2d.velocity = moveVector;
+            TiltTransform();
+        }
     }
     #endregion
 
@@ -140,6 +148,12 @@ public class PlayerControllerScript : MonoBehaviour
             Debug.Log("Bounce");
             currentJump = 0;
             rb2d.velocity = Vector2.up * jumpVelocity;
+        }
+
+
+        if(collision.CompareTag("Flag"))
+        {
+            GameManagerScript.Happiness = 10;
         }
     }
 }

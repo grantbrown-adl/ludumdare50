@@ -8,6 +8,7 @@ public class SpikeScript : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
+            Debug.Log("Spike");
             GameManagerScript.Happiness--;
             Destroy(transform.parent.gameObject);
         }

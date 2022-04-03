@@ -19,7 +19,7 @@ public class RockRollScript : MonoBehaviour
     [SerializeField] private float gravityScale;
     [SerializeField] private float rotateFactor;
     [SerializeField] private float angleCoefficient;
-    [SerializeField] private bool isFacingRight;
+    //[SerializeField] private bool isFacingRight;
 
     [SerializeField] private int maxJumps;
     [SerializeField] private int currentJump;
@@ -46,14 +46,23 @@ public class RockRollScript : MonoBehaviour
     private void Update()
     {
         viewPlatformTouch = hasTouchedPlatform;
-        GetInput();
-        HandleInput();
+
+        if(!GameManagerScript.IsPaused)
+        {
+            GetInput();
+            HandleInput();
+        }
     }
 
     private void FixedUpdate()
     {
+
+        if(!GameManagerScript.IsPaused)
+        {
+            TiltTransform();
+        }
         rb2d.velocity = moveVector;
-        TiltTransform();
+        
     }
     #endregion
 
@@ -67,9 +76,12 @@ public class RockRollScript : MonoBehaviour
     void HandleInput()
     {
         if(IsGrounded)
+        {
             currentJump = 0;
+            //rb2d.velocity = new Vector2(rb2d.velocity.x, 1 * jumpVelocity);
+        }
 
-        if(Input.GetButtonDown("Jump") && (currentJump < maxJumps))
+        if((Input.GetButtonDown("Jump") || Input.GetButtonDown("Fire2")) && (currentJump < maxJumps))
         {
             currentJump++;
             rb2d.velocity = new Vector2(rb2d.velocity.x, 1 * jumpVelocity);
@@ -80,7 +92,7 @@ public class RockRollScript : MonoBehaviour
             isGrounded = false;
         else
             isGrounded = playerGround.CollisionList.Count > 0;
-
+/*
         if(!isFacingRight && inputVector.x >= epsilon)
         {
             spriteRenderer.flipX = false;
@@ -91,8 +103,9 @@ public class RockRollScript : MonoBehaviour
             spriteRenderer.flipX = true;
             isFacingRight = !isFacingRight;
         }
+*/
         inputVector.Normalize();
-        moveVector = new Vector2(inputVector.x * moveSpeed, rb2d.velocity.y);
+        moveVector = new Vector2(0.0f, rb2d.velocity.y);
 
     }
 
@@ -105,7 +118,7 @@ public class RockRollScript : MonoBehaviour
 
     void InitialiseSettings()
     {
-        isFacingRight = true;
+        //isFacingRight = true;
         transform.position = startVector;
         rb2d.gravityScale = gravityScale;
         rb2d.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
@@ -130,7 +143,9 @@ public class RockRollScript : MonoBehaviour
         {
             Debug.Log("Bounce");
             currentJump = 0;
-            rb2d.velocity = Vector2.up * jumpVelocity;
+            rb2d.velocity = Vector2.up * (jumpVelocity * 0.5f);
+            GameManagerScript.Happiness++;
+            Destroy(collision.transform.parent.gameObject);
         }
     }
 }
