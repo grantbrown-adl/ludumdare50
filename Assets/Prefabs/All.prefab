@@ -135,6 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0
   happiness: -1
+  broken: {fileID: 1877485315426981929, guid: 032493b1cfb09104eac27d5f31506ed2, type: 3}
 --- !u!1 &1841851855192939516
 GameObject:
   m_ObjectHideFlags: 0

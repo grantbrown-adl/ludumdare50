@@ -46,7 +46,6 @@ public class MovingPlatformScript : MonoBehaviour
     IEnumerator Wait(float time, Collider2D collider)
     {
         yield return new WaitForSeconds(time);
-
         collider.transform.parent = null;
         Destroy(this.gameObject);
     }

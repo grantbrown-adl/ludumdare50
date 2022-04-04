@@ -75,7 +75,7 @@ public class GameManagerScript : MonoBehaviour
     public void LoadMenu()
     {
         happiness = 0;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
         Destroy(this.gameObject);
     }
 
@@ -83,7 +83,7 @@ public class GameManagerScript : MonoBehaviour
     {
         happiness = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        if(SceneManager.GetActiveScene().buildIndex == 1)
+        if(SceneManager.GetActiveScene().buildIndex == 2)
             Destroy(this.gameObject);
         else
         {

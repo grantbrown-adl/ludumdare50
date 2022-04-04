@@ -6,6 +6,8 @@ public class S3Spawned : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
     [SerializeField] private int happiness;
+    [SerializeField] GameObject broken;
+    [SerializeField] private int number;
 
     private void Start()
     {
@@ -24,6 +26,8 @@ public class S3Spawned : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
+            //GameObject go = Instantiate(broken, this.transform.position, Quaternion.identity);
+            //Destroy(go, 2.0f);
             GameManagerScript.Happiness += happiness;
             Destroy(this.gameObject);
         }

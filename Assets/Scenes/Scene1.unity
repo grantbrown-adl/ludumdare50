@@ -170,7 +170,7 @@ MonoBehaviour:
   - {fileID: 5595371000941320309, guid: 6115e1aedf9b57a4cbac4e0297932de5, type: 3}
   - {fileID: 7863058894432515660, guid: 58807973c060c27449f34150e9bcd961, type: 3}
   playerTransform: {fileID: 1756064994}
-  spawnRange: 8.75
+  spawnRange: 8
   timer: 0.5
   countdown: 0
 --- !u!1 &116812574
@@ -1627,7 +1627,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -9.4, y: 0}
+  m_Offset: {x: -9.25, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1638,7 +1638,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 12}
+  m_Size: {x: 1.6925592, y: 12}
   m_EdgeRadius: 0
 --- !u!61 &1422118967
 BoxCollider2D:
@@ -1653,7 +1653,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 9.4, y: 0}
+  m_Offset: {x: 9.25, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1664,7 +1664,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 12}
+  m_Size: {x: 1.8138618, y: 12}
   m_EdgeRadius: 0
 --- !u!4 &1422118968
 Transform:
@@ -1693,7 +1693,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -5.5}
+  m_Offset: {x: 0, y: -5.444686}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1704,7 +1704,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 20, y: 1}
+  m_Size: {x: 20, y: 1.1106281}
   m_EdgeRadius: 0
 --- !u!61 &1422118970
 BoxCollider2D:
@@ -1719,7 +1719,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 5.5}
+  m_Offset: {x: 0, y: 4.813547}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1730,7 +1730,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 20, y: 1}
+  m_Size: {x: 20, y: 2.372906}
   m_EdgeRadius: 0
 --- !u!1 &1695917147
 GameObject:
@@ -2538,9 +2538,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Thanks for playing!  \nIt was inevitable that you'd get to the end, it
-    was only a matter of time.  \nAnd all my characters thank you for making sure
-    their inevitabilities never occurred."
+  m_text: "Thanks for playing!  \n\nAll our characters didn't give up and made it
+    through their ordeals.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3957ba3cbd2e69040a18fc45095271c2, type: 2}
   m_sharedMaterial: {fileID: 8004743377693416956, guid: 3957ba3cbd2e69040a18fc45095271c2, type: 2}
@@ -2825,7 +2824,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3008,6 +3007,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5475503763353406158, guid: eb560206140117e44b36904648d5e1e6, type: 3}
+      propertyPath: m_text
+      value: "A person falling with only their thoughts as company.  \nHelp them
+        by focusing on positive thoughts rather, and hopefully escape the prison
+        of their mind."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5475503763907170782, guid: eb560206140117e44b36904648d5e1e6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5475503763907170783, guid: eb560206140117e44b36904648d5e1e6, type: 3}
+      propertyPath: m_text
+      value: 'Chapter 1:
+
+        Despair'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5475503763907170783, guid: eb560206140117e44b36904648d5e1e6, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5475503764094134426, guid: eb560206140117e44b36904648d5e1e6, type: 3}
       propertyPath: m_Name
       value: StartCanvas
@@ -3099,6 +3118,10 @@ PrefabInstance:
     - target: {fileID: 5475503764094134427, guid: eb560206140117e44b36904648d5e1e6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5475503764678109123, guid: eb560206140117e44b36904648d5e1e6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -250
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb560206140117e44b36904648d5e1e6, type: 3}

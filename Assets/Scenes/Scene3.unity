@@ -177,7 +177,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -553,6 +553,7 @@ MonoBehaviour:
   timerMin: 0.5
   countdown: 0
   isSceneThree: 1
+  spawnConstant: 0
   moveRight: 0
 --- !u!4 &1210431282
 Transform:
@@ -670,13 +671,22 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5475503763353406158, guid: eb560206140117e44b36904648d5e1e6, type: 3}
       propertyPath: m_text
-      value: "Even once you are out of the hole, it can feel like your life is full
-        of obstacles.  \nShow that you are a rock, and avoid all the obstacles in
-        your way."
+      value: "A wound only time can heal.  \nEven those who appear to be rocks feel
+        its sharp cut.  \nDon't let obstacles get in the way of the healing process."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5475503763907170782, guid: eb560206140117e44b36904648d5e1e6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5475503763907170783, guid: eb560206140117e44b36904648d5e1e6, type: 3}
       propertyPath: m_text
-      value: Chapter 3
+      value: 'Chapter 3:
+
+        Grief'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5475503763907170783, guid: eb560206140117e44b36904648d5e1e6, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5475503764094134426, guid: eb560206140117e44b36904648d5e1e6, type: 3}
       propertyPath: m_Name
@@ -770,9 +780,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5475503764678109123, guid: eb560206140117e44b36904648d5e1e6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -250
+      objectReference: {fileID: 0}
     - target: {fileID: 5475503765244667087, guid: eb560206140117e44b36904648d5e1e6, type: 3}
       propertyPath: m_text
-      value: Use space to jump and avoid the obstacles.
+      value: 'Use space to jump and avoid the obstacles, you will gain happiness
+        as time goes on. '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb560206140117e44b36904648d5e1e6, type: 3}
