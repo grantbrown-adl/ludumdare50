@@ -170,6 +170,7 @@ MonoBehaviour:
   - {fileID: 5595371000941320309, guid: 6115e1aedf9b57a4cbac4e0297932de5, type: 3}
   - {fileID: 7863058894432515660, guid: 58807973c060c27449f34150e9bcd961, type: 3}
   playerTransform: {fileID: 1756064994}
+  changeMoveSpeed: 3
   spawnRange: 8
   timer: 0.5
   countdown: 0
@@ -1970,7 +1971,7 @@ MonoBehaviour:
   moveVector: {x: 0, y: 0}
   startVector: {x: 0, y: 0}
   currentAngle: {x: 0, y: 0, z: 0}
-  moveSpeed: 5
+  moveSpeed: 8
   gravityScale: 0
   rotateFactor: 2
   angleCoefficient: 3
@@ -3010,8 +3011,8 @@ PrefabInstance:
     - target: {fileID: 5475503763353406158, guid: eb560206140117e44b36904648d5e1e6, type: 3}
       propertyPath: m_text
       value: "A person falling with only their thoughts as company.  \nHelp them
-        by focusing on positive thoughts rather, and hopefully escape the prison
-        of their mind."
+        by focusing on positive thoughts, and hopefully escape the prison of their
+        mind."
       objectReference: {fileID: 0}
     - target: {fileID: 5475503763907170782, guid: eb560206140117e44b36904648d5e1e6, type: 3}
       propertyPath: m_SizeDelta.y

@@ -30,9 +30,10 @@ public class MovingPlatformScript : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             collision.transform.parent = this.gameObject.transform;
-            float rand = Random.Range(1.0f, 3.0f);
+            //float rand = Random.Range(1.0f, 3.0f);
+            float rand = Random.Range(1, 3);
 
-            StartCoroutine(Wait(rand, collision));
+            StartCoroutine(Wait(rand));
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -42,11 +43,11 @@ public class MovingPlatformScript : MonoBehaviour
             collision.transform.parent = null;
         }
     }
-
-    IEnumerator Wait(float time, Collider2D collider)
+        
+    IEnumerator Wait(float time)
     {
         yield return new WaitForSeconds(time);
-        collider.transform.parent = null;
+        //collider.transform.parent = null;
         Destroy(this.gameObject);
     }
 }

@@ -6,6 +6,7 @@ public class SpawnerScript : MonoBehaviour
 {
     [SerializeField] GameObject[] objectsToSpawn;
     [SerializeField] Transform playerTransform;
+    [SerializeField] private float changeMoveSpeed;
     [SerializeField] private static float moveSpeed;
     [SerializeField] private float spawnRange;
 
@@ -17,7 +18,7 @@ public class SpawnerScript : MonoBehaviour
 
     private void Start()
     {
-        MoveSpeed = 4.0f;
+        MoveSpeed = changeMoveSpeed;
         countdown = 2.0f;
     }
 
